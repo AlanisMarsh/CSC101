@@ -43,14 +43,14 @@ def ascending_pairs(L:list[list[int]])->list[list[int]]:
 # Part 4
 # adds two types of Price making sure that cents remains at or below 99
 # returns a type Price
-def add_prices(P1:data.Price, P2:data.Price)-> data.Price:
+def add_prices(P1: data.Price, P2: data.Price)-> data.Price:
     dollars = P1.dollars + P2.dollars
     cents = P1.cents + P2.cents
     if cents > 99:
         cents -= 100
         dollars += 1
 
-    return data.Price(dollars,cents)
+    return data.Price(dollars, cents)
 
 # Part 5
 # takes in a type Rectangle and returns a float of the area of said rectangle
@@ -75,10 +75,10 @@ def books_by_author(auth:str, bks:list[data.Book]) -> list[str]:
 
 # Part 7
 # finds the smallest possible measurements to create a circle that surrounds the given type Rectangle
-def circle_bound(rect:data.Rectangle) -> data.Circle:
+def circle_bound(rect: data.Rectangle) -> data.Circle:
     a = (rect.bottom_right.x + rect.top_left.x)/2
     b = (rect.bottom_right.y + rect.top_left.y)/2
-    center = data.Point(a,b)
+    center = data.Point(a, b)
     radius = math.sqrt((a - rect.bottom_right.x)*(a - rect.bottom_right.x) + (b - rect.bottom_right.y)*(b - rect.bottom_right.y))
     return(data.Circle(center, radius))
 

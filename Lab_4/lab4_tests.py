@@ -1,4 +1,3 @@
-import data
 import lab4
 import unittest
 

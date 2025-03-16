@@ -1,5 +1,3 @@
-import data
-
 # Write your functions for each part in the space below.
 
 # Part 1
